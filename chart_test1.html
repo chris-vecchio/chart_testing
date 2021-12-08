@@ -7,7 +7,10 @@
 
 <script>
 $(function() {
-Highcharts.chart('container', {
+var options = {
+    chart: {
+        renderTo: 'container'
+    },
 
     title: {
         text: 'Solar Employment Growth by Sector, 2010-2016'
@@ -78,5 +81,7 @@ Highcharts.chart('container', {
 
 });
 });
+    
+var chart = new Highcharts.Chart('container', options); 
 </script>
 </div>
