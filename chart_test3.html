@@ -1,11 +1,13 @@
-<div id="container">
+<div id="container"></div>
+<div id="container2"></div>
+<div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/series-label.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
+</div>
 <script>
 var jq = $.noConflict();
 // (function(){
@@ -86,6 +88,25 @@ var options = {
 
 
 var chart = new Highcharts.Chart('container', options);
-});
+    
+    
+var options2 = {
+    chart: {
+        type: 'column'
+    },
+    data: {
+        // enablePolling: true,
+        csvURL: window.location.origin + '/studies/data.csv'
+    },
+    title: {
+        text: 'Fruit Consumption'
+    },
+    yAxis: {
+        title: {
+            text: 'Units'
+        }
+    }
+};
+var chart2 = new Highcharts.Chart('container2', options2);
 </script>
-</div>
+
