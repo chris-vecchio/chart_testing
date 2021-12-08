@@ -8,6 +8,7 @@
 
 <script>
 var jq = $.noConflict();
+// (function(){
 jq(function() {
 var options = {
     chart: {
@@ -81,9 +82,9 @@ var options = {
         }]
     }
 
+}
 });
-});
-    
-var chart = new Highcharts.Chart('container', options); 
+
+var chart = new Highcharts.Chart('container', options);
 </script>
 </div>
